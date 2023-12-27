@@ -1,4 +1,4 @@
-import { gsap } from 'https://cdn.skypack.dev/gsap';
+// import { gsap } from 'https://cdn.skypack.dev/gsap';
 
 const loadingManager = new THREE.LoadingManager()
 loadingManager.onStart = () => {
