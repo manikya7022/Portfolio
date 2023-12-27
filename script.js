@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import './Portfolio/styles.css'
-import gsap from 'gsap'
+import gsap from './node_modules/gsap'
 
 const loadingManager = new THREE.LoadingManager()
 loadingManager.onStart = () => {
