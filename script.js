@@ -15,10 +15,10 @@ loadingManager.onError = () => {
 }
 
 const textureLoader = new THREE.TextureLoader(loadingManager)
-const texture = textureLoader.load('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fschool-texture&psig=AOvVaw0D5p8HgGHd2SdqFs4lAPRG&ust=1703786377566000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCKDrwYCZsIMDFQAAAAAdAAAAABAE')
-const texture1 = textureLoader.load('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fschool-texture&psig=AOvVaw0D5p8HgGHd2SdqFs4lAPRG&ust=1703786377566000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCKDrwYCZsIMDFQAAAAAdAAAAABAE')
-const texture2 = textureLoader.load('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fschool-texture&psig=AOvVaw0D5p8HgGHd2SdqFs4lAPRG&ust=1703786377566000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCKDrwYCZsIMDFQAAAAAdAAAAABAE')
-const texture3 = textureLoader.load('/https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fschool-texture&psig=AOvVaw0D5p8HgGHd2SdqFs4lAPRG&ust=1703786377566000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCKDrwYCZsIMDFQAAAAAdAAAAABAE')
+const texture = textureLoader.load('https://img.freepik.com/free-vector/hand-drawn-back-school-background_23-2148220038.jpg?w=740&t=st=1703700503~exp=1703701103~hmac=e03b3705ab555fdcd10263679da004e1b77421506bcb762731fd8c22b89206fd')
+const texture1 = textureLoader.load('https://img.freepik.com/free-vector/hand-drawn-back-school-background_23-2148220038.jpg?w=740&t=st=1703700503~exp=1703701103~hmac=e03b3705ab555fdcd10263679da004e1b77421506bcb762731fd8c22b89206fd')
+const texture2 = textureLoader.load('https://img.freepik.com/free-vector/hand-drawn-back-school-background_23-2148220038.jpg?w=740&t=st=1703700503~exp=1703701103~hmac=e03b3705ab555fdcd10263679da004e1b77421506bcb762731fd8c22b89206fd')
+const texture3 = textureLoader.load('https://img.freepik.com/free-vector/hand-drawn-back-school-background_23-2148220038.jpg?w=740&t=st=1703700503~exp=1703701103~hmac=e03b3705ab555fdcd10263679da004e1b77421506bcb762731fd8c22b89206fd')
 texture.colorSpace = THREE.SRGBColorSpace
 
 const cursor = {
