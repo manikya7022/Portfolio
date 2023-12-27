@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import './Portfolio/styles.css'
-import gsap from './node_modules/gsap'
+import { gsap } from 'https://cdn.skypack.dev/gsap';
 
 const loadingManager = new THREE.LoadingManager()
 loadingManager.onStart = () => {
