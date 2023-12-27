@@ -15,10 +15,10 @@ loadingManager.onError = () => {
 }
 
 const textureLoader = new THREE.TextureLoader(loadingManager)
-const texture = textureLoader.load('/image.png')
-const texture1 = textureLoader.load('/image4.jpg')
-const texture2 = textureLoader.load('/image1.png')
-const texture3 = textureLoader.load('/image3.jpg')
+const texture = textureLoader.load('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fschool-texture&psig=AOvVaw0D5p8HgGHd2SdqFs4lAPRG&ust=1703786377566000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCKDrwYCZsIMDFQAAAAAdAAAAABAE')
+const texture1 = textureLoader.load('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fschool-texture&psig=AOvVaw0D5p8HgGHd2SdqFs4lAPRG&ust=1703786377566000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCKDrwYCZsIMDFQAAAAAdAAAAABAE')
+const texture2 = textureLoader.load('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fschool-texture&psig=AOvVaw0D5p8HgGHd2SdqFs4lAPRG&ust=1703786377566000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCKDrwYCZsIMDFQAAAAAdAAAAABAE')
+const texture3 = textureLoader.load('/https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fschool-texture&psig=AOvVaw0D5p8HgGHd2SdqFs4lAPRG&ust=1703786377566000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCKDrwYCZsIMDFQAAAAAdAAAAABAE')
 texture.colorSpace = THREE.SRGBColorSpace
 
 const cursor = {
