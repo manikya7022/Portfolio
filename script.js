@@ -15,10 +15,10 @@ loadingManager.onError = () => {
 }
 
 const textureLoader = new THREE.TextureLoader(loadingManager)
-const texture = textureLoader.load('https://img.freepik.com/free-vector/hand-drawn-back-school-background_23-2148220038.jpg?w=740&t=st=1703700503~exp=1703701103~hmac=e03b3705ab555fdcd10263679da004e1b77421506bcb762731fd8c22b89206fd')
-const texture1 = textureLoader.load('https://img.freepik.com/free-vector/hand-drawn-back-school-background_23-2148220038.jpg?w=740&t=st=1703700503~exp=1703701103~hmac=e03b3705ab555fdcd10263679da004e1b77421506bcb762731fd8c22b89206fd')
-const texture2 = textureLoader.load('https://img.freepik.com/free-vector/hand-drawn-back-school-background_23-2148220038.jpg?w=740&t=st=1703700503~exp=1703701103~hmac=e03b3705ab555fdcd10263679da004e1b77421506bcb762731fd8c22b89206fd')
-const texture3 = textureLoader.load('https://img.freepik.com/free-vector/hand-drawn-back-school-background_23-2148220038.jpg?w=740&t=st=1703700503~exp=1703701103~hmac=e03b3705ab555fdcd10263679da004e1b77421506bcb762731fd8c22b89206fd')
+const texture = textureLoader.load('./images/image.png')
+const texture1 = textureLoader.load('./images/image1.png')
+const texture2 = textureLoader.load('./images/image3.jpg')
+const texture3 = textureLoader.load('./images/image4.jpg')
 texture.colorSpace = THREE.SRGBColorSpace
 
 const cursor = {
