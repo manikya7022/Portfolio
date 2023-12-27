@@ -1,4 +1,3 @@
-import './Portfolio/styles.css'
 import { gsap } from 'https://cdn.skypack.dev/gsap';
 
 const loadingManager = new THREE.LoadingManager()
