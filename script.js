@@ -1,4 +1,3 @@
-// import { THREE } from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
 import './Portfolio/styles.css'
 import { gsap } from 'https://cdn.skypack.dev/gsap';
 
