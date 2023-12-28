@@ -110,7 +110,8 @@ canvas {
     margin-bottom: 10px;
 }
 
-.tab {
+.tab,
+.tabExp {
     cursor: pointer;
     padding: 10px;
     margin: 0 10px;
@@ -126,7 +127,8 @@ canvas {
     transform: translateX(-50%);
 }
 
-.dot {
+.dot,
+.dotExp {
     width: 10px;
     height: 10px;
     background-color: #fff;
@@ -135,17 +137,20 @@ canvas {
     cursor: pointer;
 }
 
-.tab-content {
+.tab-content,
+.tab-contentExp {
     display: none;
     text-align: left !important;
 }
 
-.tab-content.active {
+.tab-content.active,
+.tab-contentExp.active {
     display: block;
     text-align: left !important;
 }
 
-.dot.active {
+.dot.active,
+.dotExp.active {
     background-color: #007bff;
 }
 
