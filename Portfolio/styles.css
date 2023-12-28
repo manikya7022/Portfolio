@@ -23,7 +23,7 @@
     overflow-y: hidden;
 }
 
-section:nth-child(odd) {
+section:nth-child(even) {
     justify-content: flex-end;
 }
 
@@ -43,6 +43,30 @@ canvas {
     width: 60%;
     margin-left: auto;
     margin-right: 0px;
+}
+
+#AboutId {
+    display: block;
+    opacity: 1;
+    width: 60%;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+#myProtfolio {
+    display: block;
+    opacity: 1;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.imageCss {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.link {
+    color: #007bff;
 }
 
 #ExperienceId,
@@ -67,8 +91,28 @@ canvas {
     border-radius: 10px;
 }
 
+.paragraphInfo1 {
+    font-size: 3vmin;
+    animation: fadeIn 1s ease-in-out;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    line-height: 1.3;
+    background-color: #2c2730;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
 .Details {
     color: #ffffff;
+}
+
+.Introheader {
+    text-align: left !important;
+    white-space: nowrap !important;
+    color: #ffffff;
+    font-size: 5vmin;
+    margin-bottom: 10px;
 }
 
 .header {
@@ -76,6 +120,13 @@ canvas {
     white-space: nowrap !important;
     color: #ffffff;
     font-size: 4vmin;
+    margin-bottom: 10px;
+}
+
+.introContent {
+    text-align: right !important;
+    color: #ffffff;
+    font-size: 2.5vmin;
     margin-bottom: 10px;
 }
 

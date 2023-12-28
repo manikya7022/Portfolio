@@ -105,10 +105,10 @@ const geoShape4 = new THREE.Mesh(
     new THREE.MeshBasicMaterial({ map: texture3 })
 )
 
-geoShape1.position.y = -objectDistance * 0;
-geoShape2.position.y = -objectDistance * 1;
-geoShape3.position.y = -objectDistance * 2;
-geoShape4.position.y = -objectDistance * 3;
+geoShape1.position.y = -objectDistance * 1;
+geoShape2.position.y = -objectDistance * 2;
+geoShape3.position.y = -objectDistance * 3;
+geoShape4.position.y = -objectDistance * 4;
 
 geoShape1.position.x = 2.5
 geoShape2.position.x = -2.5
