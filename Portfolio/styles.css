@@ -18,8 +18,8 @@
     font-family: 'Cabin', sans-serif;
     color: #989aa1;
     font-size: 7vmin;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 3%;
+    padding-right: 3%;
     overflow-y: hidden;
 }
 
@@ -42,10 +42,11 @@ canvas {
     text-align: right;
     width: 60%;
     margin-left: auto;
-    margin-right: 0;
+    margin-right: 0px;
 }
 
-#ExperienceId {
+#ExperienceId,
+#VolunteeringId {
     display: none;
     opacity: 0;
     text-align: right;
@@ -148,5 +149,12 @@ canvas {
     background-color: #007bff;
 }
 
+#Education,
+#Publications {
+    padding-left: 50px;
+}
 
-/* Add more styling as needed for the content and tabs */
+#Volunteering,
+#Experience {
+    padding-right: 50px;
+}

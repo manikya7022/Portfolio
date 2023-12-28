@@ -1,5 +1,3 @@
-// import { gsap } from 'https://cdn.skypack.dev/gsap';
-
 const loadingManager = new THREE.LoadingManager()
 loadingManager.onStart = () => {
     console.log('loading started')
@@ -16,9 +14,9 @@ loadingManager.onError = () => {
 
 const textureLoader = new THREE.TextureLoader(loadingManager)
 const texture = textureLoader.load('./images/image.png')
-const texture1 = textureLoader.load('./images/image1.png')
-const texture2 = textureLoader.load('./images/image3.jpg')
-const texture3 = textureLoader.load('./images/image4.jpg')
+const texture1 = textureLoader.load('./images/image4.jpg')
+const texture2 = textureLoader.load('./images/image1.png')
+const texture3 = textureLoader.load('./images/image3.jpg')
 texture.colorSpace = THREE.SRGBColorSpace
 
 const cursor = {
@@ -67,15 +65,15 @@ const scene = new THREE.Scene();
 //object
 const objectDistance = 5;
 const geoShape1 = new THREE.Mesh(
-    new THREE.BoxGeometry(1.6, 2.4, 1),
+    new THREE.BoxGeometry(1.5, 2.5, 1),
     new THREE.MeshBasicMaterial({ map: texture })
 )
 const geoShape2 = new THREE.Mesh(
-    new THREE.BoxGeometry(1.6, 2.4, 1),
+    new THREE.BoxGeometry(1.5, 2.5, 1),
     new THREE.MeshBasicMaterial({ map: texture1 })
 )
 const geoShape3 = new THREE.Mesh(
-    new THREE.BoxGeometry(1.6, 2.4, 1),
+    new THREE.BoxGeometry(1.5, 2.5, 1),
     new THREE.MeshBasicMaterial({ map: texture2 })
 )
 const geoShape4 = new THREE.Mesh(
@@ -88,10 +86,10 @@ geoShape2.position.y = -objectDistance * 1;
 geoShape3.position.y = -objectDistance * 2;
 geoShape4.position.y = -objectDistance * 3;
 
-geoShape1.position.x = 2
-geoShape2.position.x = -2
-geoShape3.position.x = 2
-geoShape4.position.x = -2
+geoShape1.position.x = 2.5
+geoShape2.position.x = -2.5
+geoShape3.position.x = 2.5
+geoShape4.position.x = -2.5
     // const material = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true })
     //const material = new THREE.MeshBasicMaterial({ color: 0xff0000 }) for red color box
 
@@ -222,7 +220,7 @@ function onGeoShape1Click(event) {
             opacity: 0,
             display: 'none',
             onComplete: () => {
-                const targetX = geoShape1.position.x === 2 ? -2.5 : 2;
+                const targetX = geoShape1.position.x === 2.5 ? -3 : 2.5;
 
                 gsap.to(geoShape1.position, {
                     duration: 0.8,
@@ -236,7 +234,7 @@ function onGeoShape1Click(event) {
                         });
                     },
                     onComplete: () => {
-                        if (targetX === 2) {
+                        if (targetX === 2.5) {
                             gsap.to('#Education', {
                                 duration: 0.5,
                                 opacity: 1,
@@ -270,7 +268,7 @@ function onGeoShape1Click(event) {
             opacity: 0,
             display: 'none',
             onComplete: () => {
-                const targetX = geoShape2.position.x === -2 ? 2.5 : -2;
+                const targetX = geoShape2.position.x === -2.5 ? 3 : -2.5;
 
                 gsap.to(geoShape2.position, {
                     duration: 0.8,
@@ -284,7 +282,7 @@ function onGeoShape1Click(event) {
                         });
                     },
                     onComplete: () => {
-                        if (targetX === -2) {
+                        if (targetX === -2.5) {
                             gsap.to('#Experience', {
                                 duration: 0.5,
                                 opacity: 1,
@@ -317,7 +315,7 @@ function onGeoShape1Click(event) {
             opacity: 0,
             display: 'none',
             onComplete: () => {
-                const targetX = geoShape3.position.x === 2 ? -2.5 : 2;
+                const targetX = geoShape3.position.x === 2.5 ? -3 : 2.5;
 
                 gsap.to(geoShape3.position, {
                     duration: 0.8,
@@ -331,7 +329,7 @@ function onGeoShape1Click(event) {
                         });
                     },
                     onComplete: () => {
-                        if (targetX === 2) {
+                        if (targetX === 2.5) {
                             gsap.to('#Publications', {
                                 duration: 0.5,
                                 opacity: 1,
@@ -364,18 +362,41 @@ function onGeoShape1Click(event) {
             opacity: 0,
             display: 'none',
             onComplete: () => {
-                const targetX = geoShape4.position.x === -2 ? 2.5 : -2;
+                const targetX = geoShape4.position.x === -2.5 ? 3 : -2.5;
 
                 gsap.to(geoShape4.position, {
                     duration: 0.8,
                     x: targetX,
                     ease: 'power2.inOut',
+                    onStart: () => {
+                        gsap.to('#VolunteeringId', {
+                            duration: 0.00000000000001,
+                            opacity: 0,
+                            display: 'none',
+                        });
+                    },
                     onComplete: () => {
-                        if (targetX === -2) {
+                        if (targetX === -2.5) {
                             gsap.to('#Volunteering', {
                                 duration: 0.5,
                                 opacity: 1,
                                 display: 'block',
+                            });
+                            gsap.to('#VolunteeringId', {
+                                duration: 0.00000000000001,
+                                opacity: 0,
+                                display: 'none',
+                            });
+                        } else {
+                            gsap.to('#VolunteeringId', {
+                                duration: 0.5,
+                                opacity: 1,
+                                display: 'inline-block',
+                            });
+                            gsap.to('#Volunteering', {
+                                duration: 0.5,
+                                opacity: 0,
+                                display: 'none',
                             });
                         }
                     }
