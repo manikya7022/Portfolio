@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 const textureLoader = new THREE.TextureLoader(loadingManager)
+const texture0 = textureLoader.load('./images/images.jpg')
 const texture = textureLoader.load('./images/image.png')
 const texture1 = textureLoader.load('./images/image4.jpg')
 const texture2 = textureLoader.load('./images/image1.png')
@@ -88,6 +89,10 @@ window.addEventListener('mousemove', (event) => {
 const scene = new THREE.Scene();
 
 const objectDistance = 5;
+const geoShape0 = new THREE.Mesh(
+    new THREE.BoxGeometry(1.2, 2.5, 1),
+    new THREE.MeshBasicMaterial({ map: texture0 })
+)
 const geoShape1 = new THREE.Mesh(
     new THREE.BoxGeometry(1.5, 2.5, 1),
     new THREE.MeshBasicMaterial({ map: texture })
@@ -105,18 +110,20 @@ const geoShape4 = new THREE.Mesh(
     new THREE.MeshBasicMaterial({ map: texture3 })
 )
 
+geoShape0.position.y = -objectDistance * 0;
 geoShape1.position.y = -objectDistance * 1;
 geoShape2.position.y = -objectDistance * 2;
 geoShape3.position.y = -objectDistance * 3;
 geoShape4.position.y = -objectDistance * 4;
 
+geoShape0.position.x = 2.5
 geoShape1.position.x = 2.5
 geoShape2.position.x = -2.5
 geoShape3.position.x = 2.5
 geoShape4.position.x = -2.5
-scene.add(geoShape1, geoShape2, geoShape3, geoShape4)
+scene.add(geoShape0, geoShape1, geoShape2, geoShape3, geoShape4)
 
-const section1 = [geoShape1, geoShape2, geoShape3, geoShape4]
+const section1 = [geoShape0, geoShape1, geoShape2, geoShape3, geoShape4]
 const pointLight = new THREE.PointLight(0xff9000, 1.5)
 scene.add(pointLight)
 
@@ -171,7 +178,7 @@ const tick = () => {
     cameraGroup.position.y += (parallaxY - cameraGroup.position.y) * 5 * deltaTime
 
     for (const mesh of section1) {
-        mesh.rotation.y = escapeTime * 0.05;
+        mesh.rotation.y = escapeTime * 0.09;
     }
 
     render.render(scene, camera)
